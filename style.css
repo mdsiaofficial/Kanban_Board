@@ -2,6 +2,7 @@
 
 :root{
     --textColor:white;
+    --textColor-alt:black;
 }
 
 *{
@@ -25,5 +26,34 @@
     overflow: scroll;
 
     background-image: url(img/bgimg1.jpg);
+    background-position: center;
+    background-size: cover;
+
 
 }
+
+#todo-form{
+    /* The padding is set to 40px on the top and bottom, and 0 on the left and right. */
+    padding: 40px 40px 0;
+}
+
+
+/* input field */
+#todo-form .input-field{
+    padding: 12px;
+    margin-right: 12px;
+
+    border-radius: 12px;
+    border: none;
+
+    box-shadow: 6px 3px 5px #c0b8b8;
+    background-color: white;
+    color: var(--textColor-alt);
+
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* board design */
