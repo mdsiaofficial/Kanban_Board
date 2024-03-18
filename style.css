@@ -11,7 +11,7 @@
     margin: 0;
     box-sizing: border-box;
     color: var(--textColor-alt);
-    font-family:  "IBM Plex Mono", "Overpass Mono", 'Courier New', Courier, monospace;
+    font-family: "Overpass Mono", Courier, 'Courier New',  "IBM Plex Mono", monospace;
     -ms-overflow-style: none; /* Hides the scrollbar in IE and Edge */
     scrollbar-width: none; /* Hides the scrollbar in Firefox */
 }
@@ -66,8 +66,11 @@
     gap:25px;
 
     padding: 25px 30px;
-    overflow: scroll;
-    height: 100%;
+    /* overflow: scroll; */
+    height: 80%;
+    
+    background: transparent;
+    backdrop-filter: blur(5px);
 
     border: 2px solid whitesmoke;
     border-radius:20px;
@@ -93,7 +96,7 @@
     margin: 12px;
     border-radius: 15px;
 
-    width: 225px;
+    width: 400px;
     min-width: 120px;
 
     /* flex-shrink: 0; */
