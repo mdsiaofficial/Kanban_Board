@@ -10,7 +10,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: var(--textColor);
+    color: var(--textColor-alt);
     font-family:  "IBM Plex Mono", "Overpass Mono", 'Courier New', Courier, monospace;
     -ms-overflow-style: none; /* Hides the scrollbar in IE and Edge */
     scrollbar-width: none; /* Hides the scrollbar in Firefox */
@@ -34,7 +34,8 @@
 
 #todo-form{
     /* The padding is set to 40px on the top and bottom, and 0 on the left and right. */
-    padding: 40px 40px 0;
+    padding: 40px 40px;
+    text-align: center;
 }
 
 
@@ -53,7 +54,66 @@
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
+    
 }
 
 
 /* board design */
+.lanes{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap:25px;
+
+    padding: 25px 30px;
+    overflow: scroll;
+    height: 100%;
+
+    border: 2px solid whitesmoke;
+    border-radius:20px;
+    margin: 0 30px;
+}
+
+.heading{
+
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.swim-lane{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background-color:antiquewhite;
+    box-shadow: 6px 3px 5px #c0b8b8;
+
+    padding: 12px;
+    margin: 12px;
+    border-radius: 15px;
+
+    width: 225px;
+    min-width: 120px;
+
+    /* flex-shrink: 0; */
+}
+
+.task{
+
+    background-color: white;
+    color: var(--textColor-alt);
+    box-shadow: 6px 3px 5px #999999;;
+    padding: 12px;
+
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: move;
+}
+
+.is-dragging{
+    scale: 1.05;
+    box-shadow: 0px 5px 15px #c0b8b8;
+    background-color: rgb(36, 36, 36);
+    color: var(--textColor);
+}
