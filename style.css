@@ -40,12 +40,20 @@
 
 
 /* input field */
+#todo-form input{
+
+    width: 40%;
+
+    
+}
 #todo-form .input-field{
     padding: 12px;
     margin-right: 12px;
 
     border-radius: 12px;
     border: none;
+
+    /* width: 40%; */
 
     box-shadow: 6px 3px 5px #c0b8b8;
     background-color: white;
