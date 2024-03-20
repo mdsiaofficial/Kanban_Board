@@ -74,7 +74,7 @@ body {
 
 .status:nth-child(even) {
     /* background-color: #cecece6b; */
-    background-color: var(--bg-3);
+    background-color: var(--bg-4);
 }
 
 .status h1 {
@@ -82,7 +82,7 @@ body {
     top: 0;
     left: 0;
     /* background-color: #343434; */
-    background-color: var(--bg-color-alt);
+    background-color: var(--bg-color-alt-2);
     color: #f3f3f3;
     margin: 0;
     width: 100%;
@@ -243,11 +243,14 @@ body {
 
     .appTitle {
         max-height: 10%;
+        width: 95%;
         overflow: auto;
     }
 
     .todo-container {
         flex-direction: column;
+        
+        
     }
 
     .status {
@@ -255,7 +258,9 @@ body {
     }
 
     .todo .close {
-        position: static;
+        position: absolute;
+        right: 10px;
+        top: 0.5px;
         margin-top: 0.5rem;
     }
 
