@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Overpass+Mono:wght@300..700&display=swap');
+
+:root{
+    --textColor:white;
+    --textColor-alt:black;
+}
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--textColor-alt);
+    font-family: "Overpass Mono", Courier, 'Courier New',  "IBM Plex Mono", monospace;
+    -ms-overflow-style: none; /* Hides the scrollbar in IE and Edge */
+    scrollbar-width: none; /* Hides the scrollbar in Firefox */
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+.board{
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+
+    background-image: url(img/bgimg1.jpg);
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+#todo-form{
+    /* The padding is set to 40px on the top and bottom, and 0 on the left and right. */
+    padding: 40px 40px;
+    text-align: center;
+}
+
+
+/* input field */
+#todo-form input{
+
+    width: 40%;
+
+    
+}
+#todo-form .input-field{
+    padding: 12px;
+    margin-right: 12px;
+
+    border-radius: 12px;
+    border: none;
+
+    /* width: 40%; */
+
+    box-shadow: 6px 3px 5px #c0b8b8;
+    background-color: white;
+    color: var(--textColor-alt);
+
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+
+/* board design */
+.lanes{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap:25px;
+
+    padding: 25px 30px;
+    /* overflow: scroll; */
+    height: 80%;
+    
+    background: transparent;
+    backdrop-filter: blur(5px);
+
+    border: 2px solid whitesmoke;
+    border-radius:20px;
+    margin: 0 30px;
+}
+
+.heading{
+
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.swim-lane{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background-color:antiquewhite;
+    box-shadow: 6px 3px 5px #c0b8b8;
+
+    padding: 12px;
+    margin: 12px;
+    border-radius: 15px;
+
+    width: 400px;
+    min-width: 120px;
+
+    /* flex-shrink: 0; */
+}
+
+.task{
+
+    background-color: white;
+    color: var(--textColor-alt);
+    box-shadow: 6px 3px 5px #999999;;
+    padding: 12px;
+
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: move;
+}
+
+.is-dragging{
+    scale: 1.05;
+    box-shadow: 0px 5px 15px #c0b8b8;
+    background-color: rgb(36, 36, 36);
+    color: var(--textColor);
+}

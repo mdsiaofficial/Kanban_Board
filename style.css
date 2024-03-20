@@ -1,131 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Overpass+Mono:wght@300..700&display=swap');
-
-:root{
-    --textColor:white;
-    --textColor-alt:black;
-}
-
 *{
-
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    color: var(--textColor-alt);
-    font-family: "Overpass Mono", Courier, 'Courier New',  "IBM Plex Mono", monospace;
-    -ms-overflow-style: none; /* Hides the scrollbar in IE and Edge */
-    scrollbar-width: none; /* Hides the scrollbar in Firefox */
 }
-
-*::-webkit-scrollbar{
-    display: none;
+:root{
+    --bg:rgb(255, 255, 255);
+    --bg-color: gainsboro;
+    --bg-color-alt:#30475E;
+    --text-color: #222831;
+    --text-color-alt:#DDDDDD;
+    --second-color:#F05454;
+    --third-color:#8FE3CF;
+    --third-color:#5C8374;
+    --shadow: 6px 3px 5px #ffffff;
 }
-
-.board{
-    width: 100%;
-    height: 100vh;
-    overflow: scroll;
-
-    background-image: url(img/bgimg1.jpg);
-    background-position: center;
-    background-size: cover;
-
-
-}
-
-#todo-form{
-    /* The padding is set to 40px on the top and bottom, and 0 on the left and right. */
-    padding: 40px 40px;
-    text-align: center;
-}
-
-
-/* input field */
-#todo-form input{
-
-    width: 40%;
-
+body{
+    font-family: "Overpass Mono", "IBM Plex Mono", JetBrains Mono, "Slabo13px-Regular", 'Courier New', "Cascadia Code", Consolas, "Inconsolata", Fira Code, monospace;
     
 }
-#todo-form .input-field{
-    padding: 12px;
-    margin-right: 12px;
 
-    border-radius: 12px;
-    border: none;
+.title{
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+    
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--second-color);
+    color: var(--bg-color-alt);
+    border-radius: 10px;
 
-    /* width: 40%; */
 
-    box-shadow: 6px 3px 5px #c0b8b8;
-    background-color: white;
-    color: var(--textColor-alt);
+}
+.board{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 
+}
+.todoContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* justify-content: space-between; */
+    /* border: var(--second-color) 1px solid; */
+    /* border-radius: 12px; */
+
+}
+
+.status{
+    width: 25%;
+    margin: 5px;
+    position: relative;
+    padding: 60px 1rem 0.5rem;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    position: relative;
+    border: .5px solid var(--third-color);
+
+
+}
+
+.status:nth-child(even){
+    background-color: var(--bg);
+}
+
+.status h1{
+    position: absolute;
+    margin: -1px 0px 0px 0px;
+    padding: 5px 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: larger;
+    font-size: 24px;
+    text-align: center;
+    background-color: var(--bg-color-alt);
+    color: var(--text-color-alt);
+    border-radius: 10px;
+
+}
+
+
+#addBtn{
+    /* position: relative; */
+    padding: .5rem 3rem;
+    outline: none;
+    /* border: none; */
+    width: 100%;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    font-size: larger;
     font-weight: bold;
-    font-size: 16px;
+    cursor: pointer;
+
+}
+
+#addBtn:hover{
+    background-color: var(--third-color);
+}
+
+.todo{
+    /* position: relative; */
+    margin: 10px 0;
+    padding: .5rem .5rem;
+    outline: none;
+    /* border: none; */
+    width: 100%;
+    background-color: var(--bg-color-alt);
+    color: var(--text-color-alt);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.todo .close{
+    font-size:x-large;
+    position: absolute;
+    right: 30px;
     cursor: pointer;
     
 }
 
-
-/* board design */
-.lanes{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    gap:25px;
-
-    padding: 25px 30px;
-    /* overflow: scroll; */
-    height: 80%;
-    
-    background: transparent;
-    backdrop-filter: blur(5px);
-
-    border: 2px solid whitesmoke;
-    border-radius:20px;
-    margin: 0 30px;
-}
-
-.heading{
-
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.swim-lane{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    background-color:antiquewhite;
-    box-shadow: 6px 3px 5px #c0b8b8;
-
-    padding: 12px;
-    margin: 12px;
-    border-radius: 15px;
-
-    width: 400px;
-    min-width: 120px;
-
-    /* flex-shrink: 0; */
-}
-
-.task{
-
-    background-color: white;
-    color: var(--textColor-alt);
-    box-shadow: 6px 3px 5px #999999;;
-    padding: 12px;
-
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: move;
-}
-
-.is-dragging{
-    scale: 1.05;
-    box-shadow: 0px 5px 15px #c0b8b8;
-    background-color: rgb(36, 36, 36);
-    color: var(--textColor);
+.todo .close:hover{
+    color: var(--second-color);
 }

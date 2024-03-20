@@ -1,81 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-
     <link rel="stylesheet" href="style.css">
-    <script src="drag.js" defer></script>
-    <script src="todo.js" defer></script>
-    <title>Kanban Board</title>
+    <title>Kanban</title>
 </head>
-
 <body>
 
+    <h1 class="title">Kanban Board</h1>
     <div class="board">
+        <div class="todoContainer">
 
-        <form action="" class="" id="todo-form">
-            <input type="text" placeholder="Todo..." id="todo-input" class="input-field">
-            <button type="submit" class="input-field">Add +</button>
-        </form>
-
-        <div class="lanes">
-
-            <!-- Section for Todo item -->
-            <div class="swim-lane" id="todo-lane">
-
-                
-                <h3 class="heading">TODO</h3>
-<!-- 
-                <p class="task" draggable="true">Get Food</p>
-                <p class="task" draggable="true">Feed baby</p>
-                <p class="task" draggable="true">Clean back yard</p>
-                <p class="task" draggable="true">Go to gym</p> -->
-
+            <div class="status">
+                <h1>Todo List</h1>
+                <button id="addBtn">Add +</button>
+    
+                <div class="todo" draggable="true">
+                    Buy a pizza
+                    <!-- <p>Buy a pizza</p> -->
+                    <span class="close">&times;</span>
+                </div>
             </div>
-
-            <!-- Section for Working item -->
-            <div class="swim-lane">
-
-                <h3 class="heading">Working</h3>
-<!-- 
-                <p class="task" draggable="true">Get Food</p>
-                <p class="task" draggable="true">Feed baby</p>
-                <p class="task" draggable="true">Clean back yard</p>
-                <p class="task" draggable="true">Go to gym</p> -->
-
+    
+            <div class="status">
+                <h1>In Progress</h1>
             </div>
-
-            <!-- Section for Done item -->
-            <div class="swim-lane">
-
-                <h3 class="heading">Done</h3>
-<!-- 
-                <p class="task" draggable="true">Get Food</p>
-                <p class="task" draggable="true">Feed baby</p>
-                <p class="task" draggable="true">Clean back yard</p>
-                <p class="task" draggable="true">Go to gym</p> -->
-
+            
+            <div class="status">
+                <h1>Paused</h1>
             </div>
-
-            <!-- Section for Paused item -->
-            <div class="swim-lane">
-
-                <h3 class="heading">Paused</h3>
-<!-- 
-                <p class="task" draggable="true">Get Food</p>
-                <p class="task" draggable="true">Feed baby</p>
-                <p class="task" draggable="true">Clean back yard</p>
-                <p class="task" draggable="true">Go to gym</p> -->
-
+    
+            <div class="status">
+                <h1>Completed</h1>
             </div>
+    
+    
         </div>
+
     </div>
+    
 
     <script src="script.js"></script>
 </body>
-
 </html>
