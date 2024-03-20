@@ -171,7 +171,7 @@ body {
 }
 
 .modal.active {
-    top: 15%;
+    top: 25%;
 }
 
 .modal .header {
@@ -228,62 +228,50 @@ body {
 
 /* For mobile phones: */
 @media only screen and (max-width: 710px) {
-    
+    .appTitle,
+    .todo-container,
+    .status,
+    .status h1,
+    .todo,
+    .todo .close,
+    .modal,
+    #todo_input,
+    #todo_submit,
+    #overlay {
+        font-size: 16px;
+    }
 
     .appTitle {
-        font-size: 16px;
-        /* Adjusted for smaller size */
-        font-weight: 100;
         max-height: 10%;
         overflow: auto;
     }
 
     .todo-container {
-        font-size: 16px;
-
         flex-direction: column;
     }
 
     .status {
-        font-size: 16px;
-
         width: 100%;
     }
 
-    .status h1 {
-        font-size: 16px;
-    }
-
-    .todo {
-        font-size: 16px;
-
-        flex-direction: column;
-        text-align: center;
-    }
-
     .todo .close {
-        font-size: 16px;
-
         position: static;
         margin-top: 0.5rem;
     }
 
     .modal {
-        font-size: 16px;
-
-        width: 100%;
+        width: 70%;
+    }
+    .modal.active {
+        top: 35%;
     }
 
     #todo_input,
     #todo_submit {
-        font-size: 16px;
-
         width: 100%;
     }
 
     #overlay {
-        font-size: 16px;
-
         display: none;
     }
 }
